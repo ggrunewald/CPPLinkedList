@@ -13,6 +13,8 @@ public:
 
 	void PushBack(int data);
 	void PushFront(int data);
+	void Insert(int data, int index);
+
 	void RemoveValue(int data);
 	void RemoveIndex(int index);
 	void Clear();
@@ -25,6 +27,6 @@ public:
 
 	void Print();
 
-	LinkedNode * GetTail();
-	LinkedNode * GetHead();
+	LinkedNode * Back();
+	LinkedNode * Front();
 };

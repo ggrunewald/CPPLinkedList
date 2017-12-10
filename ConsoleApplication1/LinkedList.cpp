@@ -26,7 +26,7 @@ void LinkedList::PushBack(int data)
 	else
 	{
 		//Looks for last element of the list
-		LinkedNode * tail = GetTail();
+		LinkedNode * tail = Back();
 
 		//Creates new node and insert it as tail's neighbor
 		LinkedNode * newNode = new LinkedNode(data);
@@ -35,6 +35,7 @@ void LinkedList::PushBack(int data)
 	}
 }
 
+/*Insert new elemeng at list begining*/
 void LinkedList::PushFront(int data)
 {
 	LinkedNode * newNode = new LinkedNode(data);
@@ -44,6 +45,38 @@ void LinkedList::PushFront(int data)
 	head = newNode;
 }
 
+/*Insert element on determined index*/
+void LinkedList::Insert(int data, int index)
+{
+	//If index on begining or end of list, will use PushFront and PushBack
+	if (index == 0)
+		PushFront(data);
+	else if (index == Size())
+		PushBack(data);
+	else
+	{
+		//Else, will search the right place on the list to insert the new element
+		LinkedNode * currNode = head->GetNext(), *prevNode = head;
+
+		int i = 1;
+	
+		while (currNode != NULL && index != i)
+		{
+			prevNode = currNode;
+			currNode = currNode->GetNext();
+			i++;
+		}
+
+		//If found the correct place, insert it
+		if (index == i)
+		{
+			LinkedNode * newNode = new LinkedNode(data);
+
+			newNode->SetNext(currNode);
+			prevNode->SetNext(newNode);
+		}
+	}
+}
 
 /*Remove all occurences of the value data*/
 void LinkedList::RemoveValue(int data)
@@ -264,7 +297,7 @@ void LinkedList::Print()
 }
 
 /*Returns last node from the list*/
-LinkedNode * LinkedList::GetTail()
+LinkedNode * LinkedList::Back()
 {
 	LinkedNode * currNode = head;
 
@@ -275,7 +308,7 @@ LinkedNode * LinkedList::GetTail()
 }
 
 /*Returns first node from the list*/
-LinkedNode * LinkedList::GetHead()
+LinkedNode * LinkedList::Front()
 {
 	return head;
 }
