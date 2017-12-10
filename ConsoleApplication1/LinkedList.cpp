@@ -45,6 +45,40 @@ void LinkedList::PushFront(int data)
 	head = newNode;
 }
 
+void LinkedList::PopBack()
+{
+	LinkedNode * currNode = head, *prevNode = NULL;
+
+	while (currNode->GetNext() != NULL)
+	{
+		prevNode = currNode;
+		currNode = currNode->GetNext();
+	}
+
+	if (prevNode != NULL)
+	{
+		prevNode->SetNext(NULL);
+	}
+	else
+	{
+		head = NULL;
+	}
+
+	delete currNode;
+}
+
+void LinkedList::PopFront()
+{
+	if (head != NULL)
+	{
+		LinkedNode * newHead = head->GetNext();
+
+		delete head;
+
+		head = newHead;
+	}
+}
+
 /*Insert element on determined index*/
 void LinkedList::Insert(int data, int index)
 {

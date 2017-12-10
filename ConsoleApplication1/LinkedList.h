@@ -17,6 +17,8 @@ public:
 
 	void RemoveValue(int data);
 	void RemoveIndex(int index);
+	void PopBack();
+	void PopFront();
 	void Clear();
 
 	void Swap(int a, int b);
