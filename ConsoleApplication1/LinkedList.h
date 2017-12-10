@@ -11,10 +11,13 @@ public:
 	LinkedList();
 	~LinkedList();
 
-	void Insert(int data);
+	void PushBack(int data);
 	void RemoveValue(int data);
 	void RemoveIndex(int index);
 	void Clear();
+
+	void Swap(int a, int b);
+	void Reverse();
 
 	int Size();
 	bool IsEmpty();

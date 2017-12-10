@@ -18,6 +18,7 @@ LinkedNode::~LinkedNode()
 {
 }
 
+/*Returns neighbor node from this one*/
 LinkedNode * LinkedNode::GetNext()
 {
 	return next;
@@ -28,6 +29,7 @@ void LinkedNode::SetNext(LinkedNode * node)
 	next = node;
 }
 
+/*Returns the content from this node*/
 int LinkedNode::GetData()
 {
 	return data;
