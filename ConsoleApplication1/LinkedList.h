@@ -12,6 +12,7 @@ public:
 	~LinkedList();
 
 	void PushBack(int data);
+	void PushFront(int data);
 	void RemoveValue(int data);
 	void RemoveIndex(int index);
 	void Clear();

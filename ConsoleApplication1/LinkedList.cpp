@@ -35,6 +35,16 @@ void LinkedList::PushBack(int data)
 	}
 }
 
+void LinkedList::PushFront(int data)
+{
+	LinkedNode * newNode = new LinkedNode(data);
+
+	newNode->SetNext(head);
+
+	head = newNode;
+}
+
+
 /*Remove all occurences of the value data*/
 void LinkedList::RemoveValue(int data)
 {
