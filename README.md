@@ -1,6 +1,6 @@
 # CPPLinkedList
 
-Sample data structure for manipulating data on a Linked List
+Sample data structure for manipulating data on a container called Linked List
 
 ## Getting Started
 
@@ -13,7 +13,7 @@ Visual Studio Solution
 
 ## Author
 
-* **Guilherme Grunewald de Magalhães** - *Initial work* - [LinkedIn](https://www.linkedin.com/in/guilhermemglhs/)
+* **Guilherme Grunewald de Magalhães** - [LinkedIn](https://www.linkedin.com/in/guilhermemglhs/)
 
 ## License
 
